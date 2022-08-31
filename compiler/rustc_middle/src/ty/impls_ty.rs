@@ -135,8 +135,9 @@ impl<'a> HashStable<StableHashingContext<'a>> for ty::RegionKind {
             ty::RePlaceholder(p) => {
                 p.hash_stable(hcx, hasher);
             }
-            ty::ReVar(..) => {
-                bug!("StableHasher: unexpected region {:?}", *self)
+            ty::ReVar(i) => {
+                // Experimental
+                i.hash_stable(hcx, hasher);
             }
         }
     }

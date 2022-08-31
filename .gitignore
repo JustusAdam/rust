@@ -77,3 +77,5 @@ package.json
 src/test/rustdoc-gui/src/**.lock
 
 # Before adding new lines, see the comment at the top.
+
+/build/
